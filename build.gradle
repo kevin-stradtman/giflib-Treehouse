@@ -1,0 +1,32 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:2.5.1'
+    }
+}
+
+
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.5.1'
+}
+
+group 'com.teamtreehouse'
+version '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'org.springframework', name: 'spring-webmvc', version: '5.3.8'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.5.1'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '2.5.1'
+}
+
+test {
+    useJUnitPlatform()
+}
